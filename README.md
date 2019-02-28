@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App de criação de Tarefas para o Desafio Insight.
 
-Things you may want to cover:
+* Versão Ruby, Rails
+    - ruby 2.5.1
+    - Rails 5.2.2
 
-* Ruby version
+* Gems
+    - devise
+    - pg (Postgresql)
 
-* System dependencies
+* O sistema permitir criar, editar e remover tarefas do usuário que estiver autenticado;
+    - Utilizando a gem 'devise', para registro e autenticação de usuário, é possível você se cadastrar para ter acesso a sua dashboard de tarefas, em que você poderá adicionar, editar e remover suas tarefas.
 
-* Configuration
+* As tarefas devem conter obrigatoriamente um título, com no mínimo 5 caracteres e a data não pode ser anterior a atual;
+    - As tarefas contém validadores referentes ao tamanho do título (não sendo menor que 5 caracteres), ou seja, incluíndo a obrigatoriedade de título.
+    Você poderá verificar essa alteração em: todo/app/models/tarefa.rb na classe: "class DatetimeValidator".
+    - Também encontrará o relacionamento da tarefa com o usuário criado pelo 'devise'.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Teste
+    - Testes realizados no modelo BDD com o 'rspec'.
