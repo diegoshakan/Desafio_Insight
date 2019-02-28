@@ -10,7 +10,7 @@ App de criação de Tarefas para o Desafio Insight.
     - devise
     - pg (Postgresql)
 
-* O sistema permitir criar, editar e remover tarefas do usuário que estiver autenticado;
+* O sistema permite criar, editar e remover tarefas do usuário que estiver autenticado;
     - Utilizando a gem 'devise', para registro e autenticação de usuário, é possível você se cadastrar para ter acesso a sua dashboard de tarefas, em que você poderá adicionar, editar e remover suas tarefas.
 
 * As tarefas devem conter obrigatoriamente um título, com no mínimo 5 caracteres e a data não pode ser anterior a atual;
