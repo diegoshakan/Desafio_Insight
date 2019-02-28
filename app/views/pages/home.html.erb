@@ -1,9 +1,24 @@
-<h1>To Do - Sua Lista de Tarefas</h1>
+<center> <h1>To Do - Sua Lista de Tarefas</h1> </center>
 
-<%= link_to 'Tarefas', tarefas_path %><br>
+<center> <div class="col-md-6" >
+    <p align="justify">
+        Venha hoje aproveitar este novo sistema desenvolvido especialmente para você que gosta de manter
+        suas tarefas sob controle, e para você também que costuma esquecer dos seus compromissos.
+        Registre-se hoje, totalmente grátis, e usufrua de todo o nosso conteúdo.
+    </p>
+     <figure>
+  <img src="https://tudosobrehospedagemdesites.com.br/site/wp-content/uploads/2016/03/facil-de-lembrar-728x364.png" alt="The Pulpit Rock" width="304" height="228">
+</figure> 
+</div>
+</center>
+
+
+<!--
+<%= link_to 'Ver Tarefas', tarefas_path %><br>
 <% if current_user %>
     <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
 <% else %>
     <%= link_to 'Entrar', new_user_session_path %><br>
     <%= link_to 'Registre-se', new_user_registration_path %>
 <% end %>
+-->

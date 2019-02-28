@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tarefas</h1>
 
+<center> 
+<h1>Minhas Tarefas</h1>
+
+<div class="col-md-8" >
 <table>
   <thead>
     <tr>
@@ -22,18 +25,20 @@
           <td><%= tarefa.body.truncate_words(3) %></td>
           <td><%= tarefa.date %></td>
           <td><%= tarefa.user.username %></td>
-          <td><%= link_to 'Show', tarefa %></td>
-          <td><%= link_to 'Edit', edit_tarefa_path(tarefa) %></td>
-          <td><%= link_to 'Destroy', tarefa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Ler', tarefa %></td>
+          <td><%= link_to 'Editar', edit_tarefa_path(tarefa) %></td>
+          <td><%= link_to 'Deletar', tarefa, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
         </tr>
       <% end %>
     <% end %>
   </tbody>
 </table>
+</div> 
+</center>
 
 <br>
-
-<%= link_to 'New Tarefa', new_tarefa_path %><br>
-<% if current_user %>
-<%= link_to 'Sair', destroy_user_session_path, method: :delete %>
-<% end %>
+<div class="col-md-4">
+      <p>
+        <%= link_to 'Adicione Nova Tarefa', new_tarefa_path %><br>
+      </p>
+</div>
