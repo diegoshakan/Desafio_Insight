@@ -1,0 +1,9 @@
+<h1>To Do - Sua Lista de Tarefas</h1>
+
+<%= link_to 'Tarefas', tarefas_path %><br>
+<% if current_user %>
+    <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+<% else %>
+    <%= link_to 'Entrar', new_user_session_path %><br>
+    <%= link_to 'Registre-se', new_user_registration_path %>
+<% end %>

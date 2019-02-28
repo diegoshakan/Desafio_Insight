@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tarefas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Descrição</th>
+      <th>Data</th>
+      <th>Usuário</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <% @tarefas.each do |tarefa| %>
+      <% if tarefa.user == current_user%>
+        <tr>
+          <td><%= tarefa.title %></td>
+          <td><%= tarefa.body.truncate_words(3) %></td>
+          <td><%= tarefa.date %></td>
+          <td><%= tarefa.user.username %></td>
+          <td><%= link_to 'Show', tarefa %></td>
+          <td><%= link_to 'Edit', edit_tarefa_path(tarefa) %></td>
+          <td><%= link_to 'Destroy', tarefa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tarefa', new_tarefa_path %><br>
+<% if current_user %>
+<%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+<% end %>

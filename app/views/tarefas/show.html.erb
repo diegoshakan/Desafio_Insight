@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Título:</strong>
+  <%= @tarefa.title %>
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @tarefa.body %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @tarefa.date %>
+</p>
+
+<p>
+  <strong>Usuário:</strong>
+  <%= @tarefa.user.username %>
+</p>
+
+<%= link_to 'Editar', edit_tarefa_path(@tarefa) %> |
+<%= link_to 'Voltar', tarefas_path %>
