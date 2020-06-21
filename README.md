@@ -8,6 +8,13 @@ App de criação de Tarefas para o Desafio Insight, o qual passei =D
 
 Está hospedado aqui -> [Desafio Insight](http://todo-insight.herokuapp.com/)
 
+<p align="center">
+  <img width="460" src="app/assets/images/to_readme/telainicial.png">
+  <img width="360" src="app/assets/images/to_readme/login.png">
+  <img width="460" src="app/assets/images/to_readme/minhastarefas.png">
+  <img width="460" src="app/assets/images/to_readme/tarefasconcluídas.png">
+</p>
+
 ## Versão Ruby, Rails
 * Ruby 2.5.1;
 * Rails 5.2.2.
