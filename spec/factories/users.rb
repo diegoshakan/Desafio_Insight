@@ -12,15 +12,10 @@
 #  updated_at             :datetime         not null
 #  admin                  :boolean          default(FALSE)
 #
-class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-
-  has_many :tarefas, dependent: :destroy
-
-  def username
-    return self.email.split('@')[0].capitalize
+FactoryBot.define do
+  factory :user do
+    email { FFaker::Internet.email }
+    password { 'changeme' }
+    password_confirmation { 'changeme' }
   end
 end

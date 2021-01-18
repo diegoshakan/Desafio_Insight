@@ -12,15 +12,15 @@
 #  updated_at             :datetime         not null
 #  admin                  :boolean          default(FALSE)
 #
-class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+require 'rails_helper'
 
-  has_many :tarefas, dependent: :destroy
+RSpec.describe User, type: :model do
 
-  def username
-    return self.email.split('@')[0].capitalize
+  context 'associations' do
+    it { should have_many(:tarefas).dependent(:destroy) }
+  end
+
+  context 'validates' do
+    it { should validate_presence_of(:email) }
   end
 end

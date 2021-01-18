@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+if Rails.env.development?
+
+  user = User.create(email: "user@example.com", password: "changeme", password_confirmation: "changeme")
+  tarefa = FactoryBot.create(:tarefa, user_id: user.id)
+
+end
