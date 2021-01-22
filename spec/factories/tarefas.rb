@@ -13,7 +13,7 @@
 
 FactoryBot.define do
   factory :tarefa do
-    title { "Post About me" }
+    title { FFaker::CheesyLingo.title }
     body { FFaker::Lorem.paragraph }
     date { Date.current }
 

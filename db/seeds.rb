@@ -9,6 +9,7 @@
 if Rails.env.development?
 
   user = User.create(email: "user@example.com", password: "changeme", password_confirmation: "changeme")
-  tarefa = FactoryBot.create(:tarefa, user_id: user.id)
-
+  3.times do
+    tarefa = FactoryBot.create(:tarefa, user_id: user.id)
+  end
 end

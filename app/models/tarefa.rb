@@ -22,6 +22,11 @@
 
 class Tarefa < ApplicationRecord
   belongs_to :user
+  validates :title, presence: true
   validates_length_of :title, minimum: 5, too_short: 'O Título Deve Conter Mais que 5 Caracteres!'
+
+  validates_date :date, on: :create, on_or_after: :today
+
   # validates_with DatetimeValidator
+
 end
