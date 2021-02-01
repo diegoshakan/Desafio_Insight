@@ -22,10 +22,15 @@
 
 class Tarefa < ApplicationRecord
   belongs_to :user
+  validate :task_just_after_today
   validates :title, presence: true
   validates_length_of :title, minimum: 5, too_short: 'O Título Deve Conter Mais que 5 Caracteres!'
 
-  validates_date :date, on: :create, on_or_after: :today
+  def task_just_after_today
+    if self.date < Date.today
+      errors.add(:date, "Data tem que ser a partir de hoje!")
+    end
+  end
 
   # validates_with DatetimeValidator
 

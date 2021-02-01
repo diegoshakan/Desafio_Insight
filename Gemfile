@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'devise'
-gem 'validates_timeliness', '~> 5.0.0.beta1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -47,7 +46,6 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'annotate'
-  gem "rspec-validates_timeliness"
 end
 
 group :development do
