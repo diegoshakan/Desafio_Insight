@@ -15,7 +15,7 @@ FactoryBot.define do
   factory :tarefa do
     title { FFaker::CheesyLingo.title }
     body { FFaker::Lorem.paragraph }
-    date { Date.current }
+    date { Date.today }
 
     association :user
   end
